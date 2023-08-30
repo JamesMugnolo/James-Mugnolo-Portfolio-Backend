@@ -7,4 +7,5 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", apiRouter);
 
-app.listen(3000);
+port = process.env.PORT | 3000;
+app.listen(port);

@@ -1,5 +1,5 @@
 const { Client } = require("pg");
-
+require("dotenv").config();
 const DBurl = `postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}`;
 const client = new Client({ DBurl });
 
