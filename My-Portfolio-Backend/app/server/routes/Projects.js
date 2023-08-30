@@ -1,6 +1,8 @@
 const express = require("express");
 let client = require("../config/databaseConfig.ts");
 let router = express.Router();
+let cors = require("cors");
+router.use(cors({ origin: "https://jamesmugnoloportfolio.netlify.app" }));
 
 router.get("/", async function (req, res) {
   try {
