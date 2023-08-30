@@ -6,10 +6,7 @@ const app = express();
 app.use("/api", apiRouter);
 app.use(cors({ origin: "https://jamesmugnoloportfolio.netlify.app" }));
 app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://jamesmugnoloportfolio.netlify.app"
-  );
+  res.header("Access-Control-Allow-Origin", "*");
 });
 app.use(express.json());
 
