@@ -3,7 +3,7 @@ const cors = require("cors");
 const apiRouter = require("./routes");
 require("dotenv").config();
 const app = express();
-app.use(cors());
+app.use(cors({ allowedHeaders: "https://jamesmugnoloportfolio.netlify.app" }));
 
 app.use(express.json());
 app.use("/api", apiRouter);
