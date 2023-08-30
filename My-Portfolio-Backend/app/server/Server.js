@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const apiRouter = require("./routes");
 
 const app = express();
@@ -10,4 +11,5 @@ app.use(function (req, res, next) {
 });
 app.use(express.json());
 
-app.listen(3000);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT);
