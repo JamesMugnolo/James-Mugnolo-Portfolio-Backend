@@ -4,6 +4,7 @@ require("dotenv").config();
 const apiRouter = require("./routes");
 
 const app = express();
+
 app.use("/api", apiRouter);
 app.use(cors());
 app.use(express.json());
