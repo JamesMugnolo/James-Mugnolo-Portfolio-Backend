@@ -1,12 +1,8 @@
 const express = require("express");
 let client = require("../config/databaseConfig.ts");
-const cors = require("cors");
 let router = express.Router();
-corsOptions = {
-  origin: "https://jamesmugnoloportfolio.netlify.app",
-  optionsSuccessStatus: 200,
-};
-router.get("/:type", cors({ corsOptions }), async function (req, res) {
+
+router.get("/:type", async function (req, res) {
   try {
     const type = req.params.type;
     const query = `SELECT id FROM skilltypes WHERE name='${type}'`;
